@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000'
+
 const CATEGORICAL_FIELDS = [
   { key: 'Tipo_Servicio', label: 'Tipo de Servicio' },
   { key: 'Canal_Contacto', label: 'Canal de Contacto' },
@@ -38,7 +40,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api/categories')
+    fetch(`${API_URL}/api/categories`)
       .then(res => res.json())
       .then(data => {
         setCategories(data)
@@ -63,7 +65,7 @@ function App() {
     setError('')
     setResult(null)
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/predict', {
+      const res = await fetch(`${API_URL}/api/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

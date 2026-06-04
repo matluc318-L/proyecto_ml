@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: proyecto-ml-api
+    runtime: python
+    repo: https://github.com/matluc318-L/proyecto_ml
+    plan: free
+    region: oregon
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend app:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/categories

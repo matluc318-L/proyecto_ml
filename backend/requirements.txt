@@ -4,3 +4,4 @@ joblib==1.5.3
 scikit-learn==1.6.1
 pandas==3.0.3
 numpy
+gunicorn==23.0.0
