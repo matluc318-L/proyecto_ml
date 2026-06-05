@@ -110,7 +110,7 @@ function App() {
           <p className="hero-sub">Ingrese los datos del cliente y obtenga una prediccion basada en Machine Learning</p>
           <div className="hero-stats">
             <div className="stat"><span className="stat-num">12</span><span className="stat-lbl">Variables</span></div>
-            <div className="stat"><span className="stat-num">85%</span><span className="stat-lbl">Precisi\u00f3n</span></div>
+            <div className="stat"><span className="stat-num">85%</span><span className="stat-lbl">Precision</span></div>
             <div className="stat"><span className="stat-num">Logistic</span><span className="stat-lbl">Modelo</span></div>
           </div>
         </div>
