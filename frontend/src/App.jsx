@@ -194,7 +194,7 @@ function App() {
           <div className="card history-card">
             <div className="card-head">
               <span className="card-badge">Historial</span>
-              <h2>{'\u{1F4CB}'} \u00daltimas predicciones</h2>
+              <h2>{'\u{1F4CB}'} \ultimas predicciones</h2>
             </div>
             <div className="history-list">
               {history.map((h, i) => (
