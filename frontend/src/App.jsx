@@ -25,7 +25,13 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [history, setHistory] = useState([])
+  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
   const resultRef = useRef(null)
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark)
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
+  }, [dark])
 
   const getDefaults = (data) => {
     const defaults = {}
@@ -93,6 +99,9 @@ function App() {
 
   return (
     <div className="page">
+      <button className="theme-toggle" onClick={() => setDark(prev => !prev)} title="Cambiar modo">
+        {dark ? '\u2600\uFE0F' : '\u{1F319}'}
+      </button>
       <header className="hero">
         <div className="hero-bg"></div>
         <div className="hero-content">
