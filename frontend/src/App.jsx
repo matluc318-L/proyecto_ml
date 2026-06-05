@@ -185,7 +185,7 @@ function App() {
               <div className="prob-track">
                 <div className="prob-fill" style={{ width: `${(result.probabilidad * 100).toFixed(1)}%` }}></div>
               </div>
-              <p className="result-foot">Modelo Logistic Regression con 85% de precisi\u00f3n</p>
+              <p className="result-foot">Modelo Logistic Regression con 85% de precisión</p>
             </div>
           )}
         </div>
